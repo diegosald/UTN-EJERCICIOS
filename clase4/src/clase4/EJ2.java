@@ -31,7 +31,7 @@ public class EJ2 {
 		}
 		}
 		else {
-			System.out.print("DEBE PASAR 2 PARAMETROS PATH OPERACION(S para suma M para multiplicacion) \n EJ: c:\\archivo.txt s");
+			System.out.print("aDEBE PASAR 2 PARAMETROS PATH OPERACION(S para suma M para multiplicacion) \n EJ: c:\\archivo.txt s");
 		} 
 			
 		
