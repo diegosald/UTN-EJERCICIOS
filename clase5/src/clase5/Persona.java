@@ -8,5 +8,20 @@ public class Persona {
 	private String apellido;
 	private LocalDateTime fechaDeNacimiento;
 	
+	public Persona(String nombre,String apellido) {
+		this.nombre = nombre;
+		this.apellido = apellido;
 	
+	
+	}
+
+public int getedad(){
+	
+	
+	return 0;
+	}
+
+
 }
+
+
