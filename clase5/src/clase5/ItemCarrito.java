@@ -15,6 +15,14 @@ public class ItemCarrito {
 		return producto.getprecio() + cantidad;
 		
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "EL PRODUCTO ES: " + this.producto.getnombre() + " Y SU PRECIO ES: " + this.precio();
+	}
+	
+	
 	
 	
 }
