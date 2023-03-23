@@ -2,69 +2,43 @@ package clase5;
 
 public class Carrito {
 private int id_carrito;
-private Producto producto1;
-private Producto producto2;
-private Producto producto3;
+private ItemCarrito item1;
+private ItemCarrito item2;
+private ItemCarrito item3;
 
 public Carrito(int id) {
 	this.id_carrito = id;
 	
 }
 
-public void setprocducto1(Producto primero) {
+public void setitem1(ItemCarrito primero) {
 	
-	this.producto1 = primero;
-	
-}
-
-public String getproducto1() {
-	
-	return this.producto1.getnombre();
+	this.item1 = primero;
 	
 }
 
-public Producto getProducto1() {
-	return producto1;
-}
-
-public void setprocducto2(Producto primero) {
+public ItemCarrito getitem1() {
 	
-	this.producto2 = primero;
+	return this.item1;
 	
 }
 
-public String getproducto2(){
-	
-	return this.producto2.getnombre();
-	
-}
-
-public void setprocducto3(Producto primero) {
-	
-	this.producto3 = primero;
-	
-}
-
-public String getproducto3() {
-	
-	return this.producto3.getnombre();
-	
-}
 
 
 
 
 public double importetotal() {
 	
-	return this.producto1.getprecio() + this.producto2.getprecio() + this.producto3.getprecio();
+	return this.item1.precio();
+			//+ this.producto2.getprecio() + this.producto3.getprecio();
 	
 }
 
 public void listaproductos() {
 	System.out.print("ID CARRITO "+this.id_carrito+"\n");
-	System.out.print(producto1.getnombre() + "\t\t"+ producto1.getprecio() + "\n");
-	System.out.print(producto2.getnombre() + "\t"+ producto2.getprecio() + "\n");
-	System.out.print(producto3.getnombre() + "\t\t"+ producto3.getprecio());
+	System.out.print(item1.toString());
+	//System.out.print(producto2.getnombre() + "\t"+ producto2.getprecio() + "\n");
+	//System.out.print(producto3.getnombre() + "\t\t"+ producto3.getprecio());
 }
 
 
