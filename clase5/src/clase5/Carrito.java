@@ -30,13 +30,27 @@ public double importetotal() {
 	
 	return total;
 }
+public double importeTotalDesc(Descuento desc) {
+	double total = 0;
+	
+	for (ItemCarrito aux : item) {
+	
+	total +=  desc.valorFinal(aux.precio()); 
+			
+	
+	}
+	
+	return total;
+}
+
+
 
 public void listaproductos() {
 	System.out.print("ID CARRITO "+this.id_carrito+"\n");
 	
 	
 	for (ItemCarrito aux : item) {
-	System.out.print(aux.toString());
+	System.out.print(aux.toString() + "\n");
 	
 	}
 	

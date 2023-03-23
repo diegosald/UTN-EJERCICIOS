@@ -12,14 +12,21 @@ public class Main {
 		Producto prueba3 = new Producto("POROTOS",(double) 9.70);
 		
 				
-		carrito1.setitem(new ItemCarrito(prueba,20));;
-		
+		carrito1.setitem(new ItemCarrito(prueba,20));
+		carrito1.setitem(new ItemCarrito(prueba2,20));
+		carrito1.setitem(new ItemCarrito(prueba3,20));
 		carrito1.listaproductos();
         
 		
 		
-		System.out.print("\nIMPORTE TOTAL: " + carrito1.importetotal());
+		System.out.print("\nIMPORTE TOTAL: " + carrito1.importetotal() + "\n");
 	
+		Descuento desc1 = new Descuentofijo();
+		desc1.setValorDesc(1.0);
+		
+		System.out.print("\nIMPORTE TOTAL: " + carrito1.importeTotalDesc(desc1) + "\n");
+		
+		 
 	}
 
 }
