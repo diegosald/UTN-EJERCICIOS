@@ -24,9 +24,15 @@ public class Main {
 		Descuento desc1 = new Descuentofijo();
 		desc1.setValorDesc(1.0);
 		
-		System.out.print("\nIMPORTE TOTAL: " + carrito1.importeTotalDesc(desc1) + "\n");
+		System.out.print("\nIMPORTE TOTAL FIJO: " + carrito1.importeTotalDesc(desc1) + "\n");
 		
-		 
+		Descuento desc2 = new DescuentoPorc();
+		desc2.setValorDesc(10);
+		
+		System.out.print("\nIMPORTE TOTAL FIJO: " + carrito1.importeTotalDesc(desc2) + "\n"); 
+		
+		
+		
 	}
 
 }

@@ -6,4 +6,5 @@
  *
  */
 module clase5 {
+	requires junit;
 }

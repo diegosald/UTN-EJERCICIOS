@@ -37,7 +37,6 @@ public double importeTotalDesc(Descuento desc) {
 	
 	total +=  desc.valorFinal(aux.precio()); 
 			
-	
 	}
 	
 	return total;
