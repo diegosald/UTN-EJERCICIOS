@@ -30,7 +30,12 @@
      <artifactId>mysql-connector-java</artifactId>
      <version>5.1.17</version>
     </dependency>
-  
+
+   <dependency>
+   	<groupId>org.utn</groupId>
+   	<artifactId>clase13</artifactId>
+   	<version>0.0.1-SNAPSHOT</version>
+   </dependency>
   </dependencies>
 
   <build>
