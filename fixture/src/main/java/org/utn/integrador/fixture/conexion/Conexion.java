@@ -22,8 +22,12 @@ import org.utn.integrador.fixture.config.Config;
 public Conexion()   {
 	 
 	try {
+		Class.forName("com.mysql.jdbc.Driver");
 		this.conec = DriverManager.getConnection(url,usuario,password);
 	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (ClassNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
