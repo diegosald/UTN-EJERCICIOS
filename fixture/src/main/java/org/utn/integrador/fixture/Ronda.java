@@ -6,14 +6,16 @@ import org.utn.integrador.fixture.config.Config;
 
 
 public class Ronda extends Config{
-int numeroRonda;
+private int numeroRonda;
+private int numeroFase; 
 private ArrayList<Partido> partidos ;
 
 
 
-public Ronda(int numero) {
+public Ronda(int numero,int numeroFase) {
 	
 	this.numeroRonda = numero;
+	this.numeroFase = numeroFase; 
 	this.partidos = new ArrayList<Partido>();
 	
 }
@@ -50,11 +52,17 @@ public void setPartidos(ArrayList<Partido> partidos) {
 
 }
 
-public int totalPartidos() {
+public int totalPartidos(int numeroFase) {
+	int cont=0;
 	
+	for (Partido par : partidos) {
+	    if (par.numeroFase == this.numeroFase) {
 	
-	return partidos.size();
-	
+		cont++;
+	}
+
+	}
+ return cont;
 }
 
 
@@ -70,7 +78,7 @@ public void verPartidos() {
 
 
 
-public void puntos(ArrayList<Participante> part) {
+public void puntos(ArrayList<Participante> part, int numeroFase) {
 	
 	
 	
@@ -81,8 +89,8 @@ public void puntos(ArrayList<Participante> part) {
     	
     	for (Pronostico pron : p.getPronostico()) {
     		    		  
-    		  if (pron.getRondaNro() == (this.numeroRonda -1)){
-    		//	  System.out.println(pron.verEquipPron());
+    		  if (pron.getRondaNro() == (this.numeroRonda -1 ) && pron.getFaseNro() == numeroFase){
+    			 // System.out.println(pron.verEquipPron());
     			  sumaPuntosNro += pron.puntos();
     			  acertados += pron.acertado();   			  
     		  }
@@ -93,14 +101,16 @@ public void puntos(ArrayList<Participante> part) {
     		
     		sumaPuntosNro += Integer.parseInt(this.getPuntosronda());
     	
-    		System.out.println("RONDA "+ this.numeroRonda + " PARTICIPANTE: " + p.getNombre() + " ACERTADOS "+ acertados + " SUMA " + this.getPuntosronda() + 
+    		System.out.println("RONDA "+ this.numeroRonda + " PARTICIPANTE: " + p.getNombre() + " ACERTADOS "+ acertados +" PUNTOS " + sumaPuntosNro + " SUMA " + this.getPuntosronda() + 
     				" POR ACERTAR TODOS LOS PARTIDOS" +" PUNTOS " + sumaPuntosNro );	   
-        	p.guardarPuntosTotal(sumaPuntosNro);
+        	System.out.println("");
+    		p.guardarPuntosTotal(sumaPuntosNro);
     	}
     		
     	else {
     		System.out.println("RONDA "+ this.numeroRonda + " PARTICIPANTE: " + p.getNombre() + " ACERTADOS "+ acertados +" PUNTOS " + sumaPuntosNro );	   
-        	p.guardarPuntosTotal(sumaPuntosNro);
+    		System.out.println("");
+    		p.guardarPuntosTotal(sumaPuntosNro);
     		
     	}
     	
@@ -110,8 +120,8 @@ public void puntos(ArrayList<Participante> part) {
     	
      }
       
-       	System.out.println("TOTAL PARTIDOS DE LA RONDA " + this.totalPartidos());
-
+      System.out.println("TOTAL PARTIDOS DE LA RONDA " + this.totalPartidos(0));
+      System.out.println("");
 }	
 
 

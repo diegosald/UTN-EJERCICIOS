@@ -34,6 +34,16 @@ public class Pronostico extends Config {
 	
     }
 
+    
+    
+	public int getFaseNro() {
+		return faseNro;
+	}
+
+	public void setFaseNro(int faseNro) {
+		this.faseNro = faseNro;
+	}
+
 	public int acertado() {
 		
 		 

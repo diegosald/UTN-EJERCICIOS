@@ -73,13 +73,13 @@ public class App
                        if (banderaRonda == Integer.parseInt(partidoPartes[1]) ){
    						
    					//	System.out.println("HAGO ADD RONDA PARTIDO " + partidoPartes[1] + " " + partidoPartes[2]+partidoPartes[3]);
-   						fases.get(banderaFase-1).getRondas().get(banderaRonda-1).getPartidos().add(new Partido(buscarEquipo(equipos,partidoPartes[2]),buscarEquipo(equipos,partidoPartes[3]),Integer.parseInt(partidoPartes[4]) ,Integer.parseInt(partidoPartes[5])));
+   						fases.get(banderaFase-1).getRondas().get(banderaRonda-1).getPartidos().add(new Partido(banderaFase,banderaRonda,buscarEquipo(equipos,partidoPartes[2]),buscarEquipo(equipos,partidoPartes[3]),Integer.parseInt(partidoPartes[4]) ,Integer.parseInt(partidoPartes[5])));
    					   } 
    					   else {
    					//	System.out.println("CREO RONDA Y HAGO ADD PARTIDO "+ partidoPartes[1] + " "+ partidoPartes[2]+partidoPartes[3]);
    						banderaRonda++;
-   						fases.get(banderaFase-1).getRondas().add(new Ronda(banderaRonda));
-   						fases.get(banderaFase-1).getRondas().get(banderaRonda-1).getPartidos().add(new Partido(buscarEquipo(equipos,partidoPartes[2]),buscarEquipo(equipos,partidoPartes[3]),Integer.parseInt(partidoPartes[4]) ,Integer.parseInt(partidoPartes[5])));
+   						fases.get(banderaFase-1).getRondas().add(new Ronda(banderaRonda,banderaFase));
+   						fases.get(banderaFase-1).getRondas().get(banderaRonda-1).getPartidos().add(new Partido(banderaFase,banderaRonda,buscarEquipo(equipos,partidoPartes[2]),buscarEquipo(equipos,partidoPartes[3]),Integer.parseInt(partidoPartes[4]) ,Integer.parseInt(partidoPartes[5])));
    						 						
    					     					   
    					   }
@@ -87,7 +87,7 @@ public class App
    			    }
    				else{
    				//	System.out.println("FASE NO EXISTE");
-   					fases.add(new Fase());
+   					fases.add(new Fase(banderaFase + 1));
    					banderaFase++;			
    				    
    					
@@ -98,8 +98,8 @@ public class App
    					} 
    					else {
    						banderaRonda=0;
-   						fases.get(banderaFase-1).getRondas().add(new Ronda(banderaRonda + 1));
-   						fases.get(banderaFase-1).getRondas().get(banderaRonda).getPartidos().add(new Partido(buscarEquipo(equipos,partidoPartes[2]),buscarEquipo(equipos,partidoPartes[3]),Integer.parseInt(partidoPartes[4]) ,Integer.parseInt(partidoPartes[5])));
+   						fases.get(banderaFase-1).getRondas().add(new Ronda(banderaRonda + 1,banderaFase));
+   						fases.get(banderaFase-1).getRondas().get(banderaRonda).getPartidos().add(new Partido(banderaFase,banderaRonda,buscarEquipo(equipos,partidoPartes[2]),buscarEquipo(equipos,partidoPartes[3]),Integer.parseInt(partidoPartes[4]) ,Integer.parseInt(partidoPartes[5])));
    				//		System.out.println("CREO RONDA Y HAGO ADD PARTIDO "+ partidoPartes[1] + " "+ partidoPartes[2]+partidoPartes[3]);
    						banderaRonda++;
    					}
@@ -136,14 +136,25 @@ public class App
       
       
    
-       for (Ronda ron : fases.get(0).getRondas()) {
-    	   
-    	   ron.puntos(participantes);
-    	   
-       }
+//       for (Ronda ron : fases.get(0).getRondas()) {
+//    	   
+//    	   ron.puntos(participantes);
+//    	   
+//       }
      
        
-       fases.get(0).puntosFase(participantes);
+    
+    	  
+    	  
+  //  System.out.println(fases.get(1).getRondas().get(1).totalPartidos(0));
+  
+        
+       for (Fase fase : fases) {
+    	   
+    	   fase.puntosFase(participantes);
+    	   
+       }
+   
        
            
        

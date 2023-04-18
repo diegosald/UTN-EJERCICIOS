@@ -3,13 +3,17 @@ package org.utn.integrador.fixture;
 
 
 public class Partido {
+	int numeroFase;
+	int numeroRonda;
 	private Equipo equipo1;
 	private Equipo equipo2;
 	private int golesEquipo1;
 	private int golesEquipo2;
 	
 	 
-	 public Partido(Equipo equipo1,Equipo equipo2, int golesEquipo1 , int golesEquipo2 ){
+	 public Partido(int numeroFase , int numeroRonda ,Equipo equipo1,Equipo equipo2, int golesEquipo1 , int golesEquipo2 ){
+		 this.numeroFase = numeroFase;
+		 this.numeroRonda = numeroRonda;
 		 this.equipo1 = equipo1;
 		 this.equipo2 = equipo2;
 		 this.golesEquipo1 = golesEquipo1;
@@ -17,6 +21,7 @@ public class Partido {
 		 
 	 }
 	
+	 
 	 public String verequipos() {
 		 
 		 return this.equipo1.getid()+ "" + this.equipo2.getid();
