@@ -141,13 +141,7 @@ public class App
     	   ron.puntos(participantes);
     	   
        }
-////  
-       for (Participante p : participantes) {
-       	
-    	   System.out.println(p.getNombre() + " TOTAL PUNTOS DE LAS RONDAS " + p.getPuntosTotal());
-       
-       } 
-       
+     
        
        fases.get(0).puntosFase(participantes);
        
