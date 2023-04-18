@@ -18,7 +18,6 @@ public class App
     {
        Conexion con = new Conexion();
        ResultSet aux ;
-       
        ArrayList<Equipo> equipos= new ArrayList<Equipo>();
        ArrayList<Participante> participantes = new ArrayList<Participante>();
        
@@ -101,7 +100,7 @@ public class App
    						banderaRonda=0;
    						fases.get(banderaFase-1).getRondas().add(new Ronda(banderaRonda + 1));
    						fases.get(banderaFase-1).getRondas().get(banderaRonda).getPartidos().add(new Partido(buscarEquipo(equipos,partidoPartes[2]),buscarEquipo(equipos,partidoPartes[3]),Integer.parseInt(partidoPartes[4]) ,Integer.parseInt(partidoPartes[5])));
-   					//	System.out.println("CREO RONDA Y HAGO ADD PARTIDO "+ partidoPartes[1] + " "+ partidoPartes[2]+partidoPartes[3]);
+   				//		System.out.println("CREO RONDA Y HAGO ADD PARTIDO "+ partidoPartes[1] + " "+ partidoPartes[2]+partidoPartes[3]);
    						banderaRonda++;
    					}
    					
@@ -142,7 +141,7 @@ public class App
     	   ron.puntos(participantes);
     	   
        }
-//  
+////  
        for (Participante p : participantes) {
        	
     	   System.out.println(p.getNombre() + " TOTAL PUNTOS DE LAS RONDAS " + p.getPuntosTotal());

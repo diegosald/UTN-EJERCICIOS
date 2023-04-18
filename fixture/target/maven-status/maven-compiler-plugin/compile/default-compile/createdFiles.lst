@@ -1,0 +1,11 @@
+org\utn\integrador\fixture\Pronostico.class
+org\utn\integrador\fixture\conexion\Conexion.class
+org\utn\integrador\fixture\Equipo.class
+org\utn\integrador\fixture\Prueba.class
+org\utn\integrador\fixture\App.class
+org\utn\integrador\fixture\config\Config.class
+org\utn\integrador\fixture\ResultadoEnum.class
+org\utn\integrador\fixture\Participante.class
+org\utn\integrador\fixture\Ronda.class
+org\utn\integrador\fixture\Fase.class
+org\utn\integrador\fixture\Partido.class
