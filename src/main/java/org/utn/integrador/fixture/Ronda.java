@@ -101,8 +101,8 @@ public void puntos(ArrayList<Participante> part, int numeroFase) {
     		
     		sumaPuntosNro += Integer.parseInt(this.getPuntosronda());
     	
-    		System.out.println("RONDA "+ this.numeroRonda + " PARTICIPANTE: " + p.getNombre() + " ACERTADOS "+ acertados + " SUMA " + this.getPuntosronda() + 
-    				" POR ACERTAR TODOS LOS PARTIDOS DE LA RONDA" +" PUNTOS " + sumaPuntosNro );	   
+    		System.out.println("RONDA "+ this.numeroRonda + " PARTICIPANTE: " + p.getNombre() + " ACERTADOS "+ acertados +" PUNTOS " + sumaPuntosNro + " SUMA " + this.getPuntosronda() + 
+    				" POR ACERTAR TODOS LOS PARTIDOS" +" PUNTOS " + sumaPuntosNro );	   
         	System.out.println("");
     		p.guardarPuntosTotal(sumaPuntosNro);
     	}
