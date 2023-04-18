@@ -60,7 +60,7 @@
           <configuration>
 					<archive>
 						<manifest>
-							<mainClass>ar.edu.utn.ap4.java.tp9.Main</mainClass>
+							<mainClass>org.utn.integrador.fixture.App</mainClass>
 						</manifest>
 					</archive>
 		  </configuration>
