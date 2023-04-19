@@ -35,7 +35,7 @@ public Conexion()   {
 		}
 		try {
 			       
-			System.out.println(url);
+			
 			
 			this.conec = DriverManager.getConnection(url,usuario,password);
 		   
