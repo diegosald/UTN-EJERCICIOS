@@ -1,5 +1,6 @@
 Manifest-Version: 1.0
 Built-By: lag
 Build-Jdk: 17.0.6
+Main-Class: org.utn.integrador.fixture.App
 Created-By: Maven Integration for Eclipse
 
