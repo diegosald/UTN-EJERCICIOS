@@ -38,7 +38,7 @@ public Conexion()   {
 			
 			
 			this.conec = DriverManager.getConnection(url,usuario,password);
-		   
+		    
 		
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
