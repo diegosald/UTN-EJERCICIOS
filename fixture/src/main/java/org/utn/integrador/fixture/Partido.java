@@ -10,7 +10,14 @@ public class Partido {
 	private int golesEquipo1;
 	private int golesEquipo2;
 	
-	 
+	 public Partido(int numeroFase , int numeroRonda ,Equipo equipo1,Equipo equipo2){
+		 this.numeroFase = numeroFase;
+		 this.numeroRonda = numeroRonda;
+		 this.equipo1 = equipo1;
+		 this.equipo2 = equipo2;
+		
+		 
+	 }
 	 public Partido(int numeroFase , int numeroRonda ,Equipo equipo1,Equipo equipo2, int golesEquipo1 , int golesEquipo2 ){
 		 this.numeroFase = numeroFase;
 		 this.numeroRonda = numeroRonda;
@@ -22,11 +29,24 @@ public class Partido {
 	 }
 	
 	 
-	 public String verequipos() {
+	 public int getGolesEquipo1() {
+		return golesEquipo1;
+	}
+	public void setGolesEquipo1(int golesEquipo1) {
+		this.golesEquipo1 = golesEquipo1;
+	}
+	public int getGolesEquipo2() {
+		return golesEquipo2;
+	}
+	public void setGolesEquipo2(int golesEquipo2) {
+		this.golesEquipo2 = golesEquipo2;
+	}
+	public String verequipos() {
 		 
 		 return this.equipo1.getid()+ "" + this.equipo2.getid();
 		 
 	 }
+	 
 	 public String verPartido() {
 		 
 		 return " " + this.equipo1.getid()+ "" + this.equipo2.getid() + " GOLES " + this.golesEquipo1 + " " + this.golesEquipo2; 

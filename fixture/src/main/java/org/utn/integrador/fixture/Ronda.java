@@ -6,16 +6,19 @@ import org.utn.integrador.fixture.config.Config;
 
 
 public class Ronda extends Config{
-private int numeroRonda;
-private int numeroFase; 
+	private int numeroFase;
+	private int numeroRonda;
+ 
+private String nombreRonda;
 private ArrayList<Partido> partidos ;
 
 
 
-public Ronda(int numero,int numeroFase) {
+public Ronda(int numeroFase,int numeroRonda,String nombreRonda) {
 	
-	this.numeroRonda = numero;
-	this.numeroFase = numeroFase; 
+	this.numeroRonda = numeroRonda;
+	this.numeroFase = numeroFase;
+	this.nombreRonda = nombreRonda;
 	this.partidos = new ArrayList<Partido>();
 	
 }
@@ -102,13 +105,13 @@ public void puntos(ArrayList<Participante> part, int numeroFase) {
     		sumaPuntosNro += Integer.parseInt(this.getPuntosronda());
     	
     		System.out.println("RONDA "+ this.numeroRonda + " PARTICIPANTE: " + p.getNombre() + " ACERTADOS "+ acertados + " SUMA " + this.getPuntosronda() + 
-    				" POR ACERTAR TODOS LOS PARTIDOS DE LA RONDA" +" PUNTOS " + sumaPuntosNro );	   
+    				" POR ACERTAR TODOS LOS PARTIDOS DE LA RONDA "+ this.nombreRonda +" PUNTOS " + sumaPuntosNro );	   
         	System.out.println("");
     		p.guardarPuntosTotal(sumaPuntosNro);
     	}
     		
     	else {
-    		System.out.println("RONDA "+ this.numeroRonda + " PARTICIPANTE: " + p.getNombre() + " ACERTADOS "+ acertados +" PUNTOS " + sumaPuntosNro );	   
+    		System.out.println("RONDA "+ this.nombreRonda+ " PARTICIPANTE: " + p.getNombre() + " ACERTADOS "+ acertados +" PUNTOS " + sumaPuntosNro );	   
     		System.out.println("");
     		p.guardarPuntosTotal(sumaPuntosNro);
     		

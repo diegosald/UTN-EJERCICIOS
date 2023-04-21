@@ -6,15 +6,24 @@ import org.utn.integrador.fixture.config.Config;
 
 public class Fase extends Config{
     private int numeroFase;
-	private ArrayList<Ronda> rondas;
+	private String nombreFase;
+    private ArrayList<Ronda> rondas;
 
 
 public Fase(int numeroFase){
 	this.rondas = new ArrayList<Ronda>();
 	this.numeroFase = numeroFase;
 }
+public Fase(int numeroFase,String nombreFase){
+	this.rondas = new ArrayList<Ronda>();
+	this.numeroFase = numeroFase;
+	this.nombreFase = nombreFase;
+}
 
 
+public String getNombreFase() {
+	return nombreFase;
+}
 public ArrayList<Ronda> getRondas() {
 	return rondas;
 }
@@ -29,7 +38,7 @@ public void puntosFase(ArrayList<Participante> part) {
 	
 	int totalPartidosFase = 0;
 	System.out.println("");
-	System.out.println("FASE " + this.numeroFase);
+	System.out.println("FASE " + this.nombreFase);
 	System.out.println("");
 	
 	
@@ -68,7 +77,7 @@ public void puntosFase(ArrayList<Participante> part) {
 			 
 				p.guardarPuntosTotal(Integer.parseInt(this.getPuntosfase()));
 			 
-				System.out.println(p.getNombre() + " SUMA " + this.getPuntosfase() + " POR ACERTAR TODOS LOS PARTIDOS DE LA FASE  " +this.numeroFase + " - " + "PUNTOS TOTALES " + p.getPuntosTotal() );
+				System.out.println(p.getNombre() + " SUMA " + this.getPuntosfase() + " POR ACERTAR TODOS LOS PARTIDOS DE LA FASE " +this.nombreFase + " - " + "PUNTOS TOTALES " + p.getPuntosTotal() );
 			}
 			
 			else {
