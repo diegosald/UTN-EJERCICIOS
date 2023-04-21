@@ -56,7 +56,7 @@ public void puntosFase(ArrayList<Participante> part) {
 	        }
 	
 	
-	System.out.println("TOTAL PARTIDOS DE LA FASE " + totalPartidosFase);
+	System.out.println("TOTAL PARTIDOS DE LA FASE: " + totalPartidosFase);
 	System.out.println("");
 	
 	for (Participante p : part) {
@@ -77,11 +77,11 @@ public void puntosFase(ArrayList<Participante> part) {
 			 
 				p.guardarPuntosTotal(Integer.parseInt(this.getPuntosfase()));
 			 
-				System.out.println(p.getNombre() + " SUMA " + this.getPuntosfase() + " POR ACERTAR TODOS LOS PARTIDOS DE LA FASE " +this.nombreFase + " - " + "PUNTOS TOTALES " + p.getPuntosTotal() );
+				System.out.println(p.getNombre() + " SUMA " + this.getPuntosfase() + " POR ACERTAR TODOS LOS PARTIDOS DE LA FASE: " +this.nombreFase + " - " + "PUNTOS TOTALES: " + p.getPuntosTotal() );
 			}
 			
 			else {
-				System.out.println(p.getNombre() + " - PUNTOS TOTALES  " + p.getPuntosTotal() );
+				System.out.println(p.getNombre() + " - PUNTOS TOTALES:  " + p.getPuntosTotal() );
 			}
 		  
 	  }

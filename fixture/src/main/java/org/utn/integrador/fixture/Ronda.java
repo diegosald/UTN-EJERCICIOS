@@ -104,14 +104,14 @@ public void puntos(ArrayList<Participante> part, int numeroFase) {
     		
     		sumaPuntosNro += Integer.parseInt(this.getPuntosronda());
     	
-    		System.out.println("RONDA "+ this.numeroRonda + " PARTICIPANTE: " + p.getNombre() + " ACERTADOS "+ acertados + " SUMA " + this.getPuntosronda() + 
-    				" POR ACERTAR TODOS LOS PARTIDOS DE LA RONDA "+ this.nombreRonda +" PUNTOS " + sumaPuntosNro );	   
+    		System.out.println("RONDA "+ this.numeroRonda + " PARTICIPANTE: " + p.getNombre() + " ACERTADOS: "+ acertados + " SUMA " + this.getPuntosronda() + 
+    				" POR ACERTAR TODOS LOS PARTIDOS DE LA RONDA: "+ this.nombreRonda +" PUNTOS: " + sumaPuntosNro );	   
         	System.out.println("");
     		p.guardarPuntosTotal(sumaPuntosNro);
     	}
     		
     	else {
-    		System.out.println("RONDA "+ this.nombreRonda+ " PARTICIPANTE: " + p.getNombre() + " ACERTADOS "+ acertados +" PUNTOS " + sumaPuntosNro );	   
+    		System.out.println("RONDA "+ this.nombreRonda+ " PARTICIPANTE: " + p.getNombre() + " ACERTADOS: "+ acertados +" PUNTOS: " + sumaPuntosNro );	   
     		System.out.println("");
     		p.guardarPuntosTotal(sumaPuntosNro);
     		
@@ -123,7 +123,7 @@ public void puntos(ArrayList<Participante> part, int numeroFase) {
     	
      }
       
-      System.out.println("TOTAL PARTIDOS DE LA RONDA " + this.totalPartidos(0));
+      System.out.println("TOTAL PARTIDOS DE LA RONDA: " + this.totalPartidos(0));
       System.out.println("");
 }	
 
