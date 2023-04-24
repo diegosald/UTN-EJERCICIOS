@@ -15,7 +15,7 @@ public class App {
 		Extras.cargaRondasDb(fases);
 		Extras.cargaPartidosDb(fases, equipos);
 		Extras.actResultadosArch(fases, Extras.validaArgs(args));
-		//Extras.cargaPronoPart(fases, equipos, participantes);
+		Extras.cargaPronoPart(fases, equipos, participantes);
 
 		for (Fase fase : fases) {
 
