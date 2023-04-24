@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import org.utn.integrador.fixture.extras.Extras;
 
 public class App {
+//TP INTEGRADOR REALIZADO POR SALDAY DIEGO ARIEL PARA EL CURSO ARGENTINA PROGRAMA UTN JAVA INICIAL
+	
 	public static void main(String[] args) {
 
 		ArrayList<Equipo> equipos = Extras.cargarEquipos();
